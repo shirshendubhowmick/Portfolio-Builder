@@ -1,28 +1,123 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+@font-face {
+  font-family: ProximaNova-Semibold;
+  src: url(proximanova-semibold-webfont.ttf);
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+.topBar {
+  height: 3.31rem;
+  background-image: linear-gradient(-90deg, #2BC4DD 0%, #3489D1 100%);
+}
+
+.App_main-body {
+  margin: 1.88rem 4.81rem;
+}
+
+.title {
+  font-family: ProximaNova-Semibold;
+  font-size: 32px;
+  color: #17BCD9;
+  line-height: 32px;
+}
+
+.stockPicker {
+  margin: 4.5rem 1rem;
+  position: relative;
+  width: 100%;
+  padding: 3.5rem 2rem 2rem 2rem;
+}
+
+.badge {
+  position: absolute;
+  display: inline-block;
+  
+  font-family: ProximaNova-Semibold;
+  font-size: 18px;
+  color: #FFFFFF;
+  line-height: 18px;
+  left: -1rem;
+  top: -0.69rem;
+  padding: 0.69rem 1.5rem;
+  box-shadow: 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
+}
+
+.badge::after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 0;
+  top: 2.5rem;
+  border-style: solid;
+  border-width: 0 1rem 2rem 0;
+}
+
+.badge_stockPicker {
+  background: #00B3D6;
+}
+
+.badge_stockPicker::after {
+  border-color: transparent #098DAD transparent transparent;
+}
+
+.stockPicker>span {
+  font-family: ProximaNova-Semibold;
+  font-size: 16px;
+  color: #00A9D2;
+}
+
+.applyFilter_button {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  right: 0;
+  font-family: ProximaNova-Semibold;
+  font-size: 16px;
+  color: #00A9D2;
+  letter-spacing: 0.5px;
+  box-shadow: 0rem 0.06rem 0.25rem rgba(0, 0, 0, 0.3);
+  border-radius: 0.13rem;
+  cursor: pointer;
+}
+
+.applyFilter_button>img {
+  margin-left: 1rem;
+  margin-top: 0.92rem;
+  margin-bottom: 0.85rem;
+  vertical-align: middle;
+}
+
+.applyFilter_button>span {
+  display: inline-block;
+  margin-left: 0.77rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  vertical-align: middle;
+}
+
+.applyFilter_button>div {
+  display: inline-block;
+  margin: 0.75rem 1rem 0.75rem 2.75rem;
+  vertical-align: middle;
+  background: #009FCE;
   color: white;
+  border-radius: 50%;
+  height: 1.25rem;
+  width: 1.25rem;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #FFFFFF;
+  line-height: 1.25rem;
 }
 
-.App-title {
-  font-size: 1.5em;
+
+.badge_managePortfolio {
+  background: #287DCE ;
 }
 
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.badge_managePortfolio::after {
+  border-color: transparent #15569C transparent transparent;
 }
