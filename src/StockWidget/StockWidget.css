@@ -1,0 +1,56 @@
+.stockWidget {
+    display: inline-block;
+    width: 15rem;
+    height: 4.5rem;
+    background: #FFFFFF;
+    box-shadow: 0 0 0.25rem 0 rgba(0,0,0,0.20);
+    border-radius: 0.25rem;
+    margin-right: calc((100% - 60rem) / 3);
+    position: relative;
+}
+  
+.stockWidget:last-child {
+    margin-right: 0rem;
+}
+  
+.name_StockWidget {
+    display: inline-block;
+    font-family: ProximaNova-Semibold;
+    font-size: 16px;
+    color: #666666;
+    line-height: 16px;
+    margin: 1.25rem 0 0 1rem;
+}
+  
+.category_StockWidget {
+    font-family: ProximaNova-Semibold;
+    font-size: 12px;
+    color: #89A6EC;
+    line-height: 12px;
+    margin: 0.25rem 0 0 1rem;
+}
+  
+.box_StockWidget {
+    width: 4.94rem;
+    height: 2.81rem;
+    position: absolute;
+    top: 0.69rem;
+    right: 0.56rem;
+    cursor: pointer;
+}
+  
+.stockWidget span {
+    font-family: ProximaNova-Light;
+    font-size: 1.5rem;
+    /* line-height: 1.81rem; */
+    color: #666666;
+    position: absolute;
+    right: 1rem;
+    top: 1.25rem;
+}
+  
+.img_StockWidget{
+    position: absolute;
+    right: 0.66rem;
+    top: 0.66rem;
+}

@@ -1,0 +1,23 @@
+.badge {
+    position: absolute;
+    display: inline-block;
+    font-family: ProximaNova-Semibold;
+    font-size: 18px;
+    color: #FFFFFF;
+    line-height: 18px;
+    left: -1rem;
+    top: -0.69rem;
+    padding: 0.69rem 1.5rem;
+    box-shadow: 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
+}
+  
+.badge::after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 0;
+    top: 2.5rem;
+    border-style: solid;
+    border-width: 0 1rem 2rem 0;
+}

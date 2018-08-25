@@ -1,0 +1,47 @@
+.stockPicker {
+    margin: 4.5rem 1rem;
+    position: relative;
+    width: 100%;
+    padding: 3.5rem 0rem 2rem 2rem;
+}
+
+.badge_stockPicker {
+    background: #00B3D6;
+}
+  
+.badge_stockPicker::after {
+    border-color: transparent #098DAD transparent transparent;
+}
+  
+.stockPicker>span {
+    font-family: ProximaNova-Semibold;
+    font-size: 16px;
+    color: #00A9D2;
+}
+
+.row_stockPicker {
+    margin-top: 1.5rem;
+    height: 4.5rem;
+}
+  
+.row_nextPrev {
+    margin-top: 1.5rem;
+}
+  
+.row_nextPrev span {
+    user-select: none;
+    font-family: ProximaNova-Semibold;
+    font-size: 1rem;
+    color: #00A9D2;
+    cursor: pointer;
+}
+  
+.row_nextPrev span:nth-child(2){
+    position: absolute;
+    right: 0;
+}
+  
+.row_nextPrevDisabled {
+    opacity: 0.3;
+    cursor: default !important;
+}

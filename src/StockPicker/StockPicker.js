@@ -3,6 +3,7 @@ import ApplyFilter from '../ApplyFilter/ApplyFilter'
 import Badge from '../Badge/Badge'
 import StockWidget from '../StockWidget/StockWidget'
 import data from '../data.json'
+import classes from './StockPicker.css'
 
 
 class stockPicker extends Component {
@@ -13,7 +14,7 @@ class stockPicker extends Component {
         endIndex: 8,
         stockNames: (Object.keys(data.price)).slice(0, 8),
         stockPrices:(Object.values(data.price)).slice(0, 8),
-        prevButtonClassNames: "row_nextPrevDisabled",
+        prevButtonClassNames: classes["row_nextPrevDisabled"],
         nextButtonCLassNames: ""
     };
     stockWidgetMouseOverHandler = (index) => {
@@ -32,7 +33,7 @@ class stockPicker extends Component {
         let tempPrevButtonClassNames;
         if(!this.state.nextButtonClassNames) {
             if(this.state.endIndex + 8 >= this.state.totalStocksDataLength) {
-                tempNextButtonCLassNames = "row_nextPrevDisabled"
+                tempNextButtonCLassNames = classes["row_nextPrevDisabled"];
             }
             if(this.state.startIndex === 0) {
                 tempPrevButtonClassNames = "";
@@ -54,7 +55,7 @@ class stockPicker extends Component {
                 tempNextButtonCLassNames = ""
             }
             if(this.state.startIndex - 8 <= 0) {
-                tempPrevButtonClassNames = "row_nextPrevDisabled";
+                tempPrevButtonClassNames = classes["row_nextPrevDisabled"];
             }
             this.setState({startIndex: this.state.startIndex - 8,
                     endIndex: this.state.startIndex,
@@ -79,19 +80,19 @@ class stockPicker extends Component {
             }
         }
         return (
-            <div className="stockPicker">
-                <Badge className="badge_stockPicker">PICK STOCKS</Badge>
+            <div className={classes.stockPicker}>
+                <Badge className={classes['badge_stockPicker']}>PICK STOCKS</Badge>
                 <span>
                     Showing {this.state.startIndex + 1} - {this.state.endIndex >= this.state.totalStocksDataLength ? this.state.totalStocksDataLength : this.state.endIndex} of {this.state.totalStocksDataLength} matching stocks
                 </span>
                 <ApplyFilter />
-                <div className="row_stockPicker">
+                <div className={classes['row_stockPicker']}>
                     {stockWidgetsRow1}
                 </div>
-                <div className="row_stockPicker">
+                <div className={classes['row_stockPicker']}>
                     {stockWidgetsRow2}
                 </div>
-                <div className="row_nextPrev">
+                <div className={classes['row_nextPrev']}>
                     <span className={this.state.prevButtonClassNames} onClick={this.prevClickHandler}>PREV</span>
                     <span className={this.state.nextButtonClassNames} onClick={this.nextClickHandler}>NEXT</span>
                 </div>

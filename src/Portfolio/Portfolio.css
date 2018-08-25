@@ -1,0 +1,22 @@
+.badge_managePortfolio {
+    background: #287DCE ;
+}
+  
+.badge_managePortfolio::after {
+    border-color: transparent #15569C transparent transparent;
+}
+
+.portfolio {
+    margin: 2rem 1rem;
+    position: relative;
+    width: 100%;
+    padding: 3.5rem 0rem 2rem 2rem;
+}
+
+.badge_portfolio {
+    background: #287DCE;
+}
+  
+.badge_portfolio::after {
+    border-color: transparent #15569C transparent transparent;
+}
