@@ -7,6 +7,12 @@
   src: url(proximanova-semibold-webfont.ttf);
 }
 
+@font-face {
+  font-family: ProximaNova-Light;
+  src: url(proximanovalight.ttf);
+}
+
+
 .topBar {
   height: 3.31rem;
   background-image: linear-gradient(-90deg, #2BC4DD 0%, #3489D1 100%);
@@ -27,7 +33,7 @@
   margin: 4.5rem 1rem;
   position: relative;
   width: 100%;
-  padding: 3.5rem 2rem 2rem 2rem;
+  padding: 3.5rem 0rem 2rem 2rem;
 }
 
 .badge {
@@ -119,5 +125,103 @@
 }
 
 .badge_managePortfolio::after {
+  border-color: transparent #15569C transparent transparent;
+}
+
+.row_stockPicker {
+  margin-top: 1.5rem;
+  height: 4.5rem;
+}
+
+.stockWidget {
+  display: inline-block;
+  width: 15rem;
+  height: 4.5rem;
+  background: #FFFFFF;
+  box-shadow: 0 0 0.25rem 0 rgba(0,0,0,0.20);
+  border-radius: 0.25rem;
+  margin-right: calc((100% - 60rem) / 3);
+  position: relative;
+}
+
+.stockWidget:last-child {
+  margin-right: 0rem;
+}
+
+.name_StockWidget {
+  display: inline-block;
+  font-family: ProximaNova-Semibold;
+  font-size: 16px;
+  color: #666666;
+  line-height: 16px;
+  margin: 1.25rem 0 0 1rem;
+}
+
+.category_StockWidget {
+  font-family: ProximaNova-Semibold;
+  font-size: 12px;
+  color: #89A6EC;
+  line-height: 12px;
+  margin: 0.25rem 0 0 1rem;
+}
+
+.box_StockWidget {
+  width: 4.94rem;
+  height: 2.81rem;
+  position: absolute;
+  top: 0.69rem;
+  right: 0.56rem;
+  cursor: pointer;
+}
+
+.stockWidget span {
+  font-family: ProximaNova-Light;
+  font-size: 1.5rem;
+  /* line-height: 1.81rem; */
+  color: #666666;
+  position: absolute;
+  right: 1rem;
+  top: 1.25rem;
+}
+
+.img_StockWidget{
+  position: absolute;
+  right: 0.66rem;
+  top: 0.66rem;
+}
+
+.row_nextPrev {
+  margin-top: 1.5rem;
+}
+
+.row_nextPrev span {
+  user-select: none;
+  font-family: ProximaNova-Semibold;
+  font-size: 1rem;
+  color: #00A9D2;
+  cursor: pointer;
+}
+
+.row_nextPrev span:nth-child(2){
+  position: absolute;
+  right: 0;
+}
+
+.row_nextPrevDisabled {
+  opacity: 0.3;
+  cursor: default !important;
+}
+
+.portfolio {
+  margin: 2rem 1rem;
+  position: relative;
+  width: 100%;
+  padding: 3.5rem 0rem 2rem 2rem;
+}
+.badge_portfolio {
+  background: #287DCE;
+}
+
+.badge_portfolio::after {
   border-color: transparent #15569C transparent transparent;
 }
