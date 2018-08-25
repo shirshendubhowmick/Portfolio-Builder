@@ -3,6 +3,7 @@ import './App.css';
 import TopBar from './TopBar/TopBar'
 import Title from './Title/Title'
 import StockPicker from './StockPicker/StockPicker'
+import Portfolio from './Portfolio/Portfolio';
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
         <div className="App_main-body">
           <Title />
           <StockPicker />
+          <Portfolio />
         </div>
       </div>
     );
