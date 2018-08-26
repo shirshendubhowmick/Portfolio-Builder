@@ -1,0 +1,41 @@
+.portfolioCart {
+    display: inline-block;
+    margin: 0;
+    width: 28.5rem;
+
+}
+
+.portfolioCart>div:nth-child(1){
+    height: 2.44rem;
+    background: #8FB9E7;
+    position: relative;
+}
+
+.portfolioCart>div span {
+    font-family: ProximaNova-Semibold;
+    font-size: 0.75rem;
+    color: #FFFFFF;
+    line-height: 1rem;
+    position: absolute;
+    top: 0.75rem;
+}
+
+.portfolioCart>div span:nth-child(1) {
+    left: 1rem;
+}
+
+.portfolioCart>div span:nth-child(2) {
+    left: 9.38rem;
+}
+
+.portfolioCart>div span:nth-child(3) {
+    left: 14.56rem;
+}
+
+.portfolioCart>div span:nth-child(4) {
+    right: 3rem;
+}
+
+.portfolioCartRowDeleteButton {
+    display: none;
+}

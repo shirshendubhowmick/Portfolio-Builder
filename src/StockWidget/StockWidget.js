@@ -7,7 +7,7 @@ const stockWidget = (props) => {
     if (props.stockPrice === "IMG") {
         widgetContent = (
             <div className={classes['box_StockWidget']}  onMouseOut={props.mouseOutHandler.bind(this, props.index)} >
-                <img src={AddCircle} alt="AddCircle" className={classes['img_StockWidget']} />
+                <img src={AddCircle} alt="AddCircle" className={classes['img_StockWidget']} onClick={() => props.addStockHandler(props.stockName)}/>
             </div>
         );
     }

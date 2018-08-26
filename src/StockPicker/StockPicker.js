@@ -72,11 +72,13 @@ class stockPicker extends Component {
         for(let i = 0; i<4; i++) {
             if(this.state.stockNames[i]) {
                 stockWidgetsRow1.push(<StockWidget stockName={this.state.stockNames[i]} stockCategory="Financial Services" stockPrice={this.state.stockPrices[i]} 
-                                mouseOverHandler = {this.stockWidgetMouseOverHandler} mouseOutHandler = {this.stockWidgetMouseOutHandler} index={i} key={i}/> )
+                                mouseOverHandler = {this.stockWidgetMouseOverHandler} mouseOutHandler = {this.stockWidgetMouseOutHandler} 
+                                addStockHandler= {this.props.addStockHandler} index={i} key={i}/> )
             }
             if(this.state.stockNames[i + 4]) {
                 stockWidgetsRow2.push(<StockWidget stockName={this.state.stockNames[i + 4]} stockCategory="Financial Services" stockPrice={this.state.stockPrices[i + 4]} 
-                                mouseOverHandler = {this.stockWidgetMouseOverHandler} mouseOutHandler = {this.stockWidgetMouseOutHandler} index={i + 4} key={i}/> )
+                                mouseOverHandler = {this.stockWidgetMouseOverHandler} mouseOutHandler = {this.stockWidgetMouseOutHandler} 
+                                addStockHandler= {this.props.addStockHandler} index={i + 4} key={i}/> )
             }
         }
         return (
