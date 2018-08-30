@@ -11,7 +11,7 @@ class portfolioCart extends Component {
             let tempQuantity = this.state.hasOwnProperty(stockName) ? this.state[stockName].quantity : 0;
             this.setState({[stockName]: {price: data.price[stockName], quantity: tempQuantity + 1, removeCircleClassName: classes.portfolioCartRowDeleteButton}});
         }
-   };
+    }
    quantityOnChangeHandler(event, stockName) {
        this.setState({[stockName]: {price: data.price[stockName], quantity: event.target.value == 0 ? 1 : event.target.value, removeCircleClassName: classes.portfolioCartRowDeleteButton}});
    }
@@ -59,6 +59,9 @@ class portfolioCart extends Component {
                {temp}
            </div>
        );
+   }
+   componentDidUpdate() {
+       this.props.passPortfolioCartState(this.state);
    }
 }
 
