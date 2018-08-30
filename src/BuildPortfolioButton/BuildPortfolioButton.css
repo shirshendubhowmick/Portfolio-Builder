@@ -1,0 +1,18 @@
+.buildPortfolioButtonDiv {
+    display: inline-block;
+    height: 3.5rem;
+    width: 13.44rem;
+    background-image: linear-gradient(-90deg, #2BC4DD 0%, #3489D1 100%);
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.30);
+    text-align: center;
+    margin-top: 2.25rem;
+    cursor: pointer;
+}
+
+.buildPortfolioButtonDiv>p {
+    font-family: ProximaNova-Semibold;
+    font-size: 1.13rem;
+    color: #FFFFFF;
+    margin-top: 1.19rem;
+    user-select: none;
+}

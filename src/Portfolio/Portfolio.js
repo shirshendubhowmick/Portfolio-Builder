@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import Badge from '../Badge/Badge'
+import Badge from '../Badge/Badge';
 import PortfolioCart from '../PortfolioCart/PortfolioCart'
-import classes from './Portfolio.css'
+import classes from './Portfolio.css';
 import PortfolioGraph from '../PortfolioGraph/PortfolioGraph';
+import PortfolioStats from '../PortfolioStats/PortfolioStats';
 
 class portfolio extends Component {
     addStockHandler(stockName) {
@@ -18,6 +19,7 @@ class portfolio extends Component {
                 <Badge className={classes.badge_portfolio}>MANAGE PORTFOLIO</Badge>
                 <PortfolioCart ref="portfolioCartChild" passPortfolioCartState={this.passPortfolioCartState.bind(this)} />
                 <PortfolioGraph ref="portfolioGraphChild" />
+                <PortfolioStats />
             </div>
         );
     }

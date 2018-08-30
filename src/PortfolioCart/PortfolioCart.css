@@ -2,7 +2,7 @@
     display: inline-block;
     margin: 0;
     width: 28.5rem;
-
+    vertical-align: top;
 }
 
 .portfolioCart>div:nth-child(1){
