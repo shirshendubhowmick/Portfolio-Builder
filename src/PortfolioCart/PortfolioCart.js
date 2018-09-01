@@ -9,7 +9,7 @@ import maxStockToastClasses from '../MaxStockToast/MaxStockToast.css'
 class portfolioCart extends Component {
     state = {}
     addStockHandler(stockName) {
-        if(Object.keys(this.state).length < 5) {
+        if(Object.keys(this.state).length < 5 || this.state.hasOwnProperty(stockName)) {
             let tempQuantity = this.state.hasOwnProperty(stockName) ? this.state[stockName].quantity : 0;
             this.setState({[stockName]: {price: data.price[stockName], quantity: tempQuantity + 1, removeCircleClassName: classes.portfolioCartRowDeleteButton}});
         }
