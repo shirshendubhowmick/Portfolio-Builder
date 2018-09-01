@@ -14,8 +14,12 @@ const stockWidget = (props) => {
     else {
         widgetContent = <span onMouseOver={props.mouseOverHandler.bind(this, props.index)} >{"₹" + props.stockPrice}</span>;
     }
+    const dragStartHandler = (e) => {
+        e.dataTransfer.setData("text/plain", props.stockName);
+        e.dataTransfer.dropEffect = "copy";
+    }
     return (
-        <div className={classes.stockWidget}>
+        <div className={classes.stockWidget} draggable="true" onDragStart={dragStartHandler}>
             <div className={classes['name_StockWidget']}>{props.stockName}</div>
             <div className={classes['category_StockWidget']}>{props.stockCategory}</div>
             {widgetContent}

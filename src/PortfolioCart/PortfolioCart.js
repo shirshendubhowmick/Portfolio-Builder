@@ -43,6 +43,15 @@ class portfolioCart extends Component {
        delete copyOfState[stockName];
        this.setState(copyOfState);
    }
+   dragOverHandler(e) {
+       e.preventDefault();
+       e.dataTransfer.dropEffect = "copy";
+   }
+   onDropHandler(e) {
+       e.preventDefault();
+       let data = e.dataTransfer.getData("text/plain");
+       this.addStockHandler(data);
+   }
    render() {
        let temp = [];
        let netWorth = 0;
@@ -58,7 +67,7 @@ class portfolioCart extends Component {
                rowOnDeleteHandler={this.rowOnDeleteHandler.bind(this)} />)
        }
        return (
-           <div className={classes.portfolioCart}>
+           <div className={classes.portfolioCart} onDragOver={this.dragOverHandler} onDrop={(e) => this.onDropHandler.call(this, e)}>
                <div>
                    <span>STOCK</span>
                    <span>PRICE</span>
