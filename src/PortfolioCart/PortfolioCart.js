@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import classes from './PortfolioCart.css';
 import PortfolioCartRow from '../PortfolioCartRow/PortfolioCartRow.js';
-import data from '../data.json'
+import data from '../data.json';
+import MaxStockToast from '../MaxStockToast/MaxStockToast'
+import maxStockToastClasses from '../MaxStockToast/MaxStockToast.css'
 
 
 class portfolioCart extends Component {
@@ -10,6 +12,13 @@ class portfolioCart extends Component {
         if(Object.keys(this.state).length < 5) {
             let tempQuantity = this.state.hasOwnProperty(stockName) ? this.state[stockName].quantity : 0;
             this.setState({[stockName]: {price: data.price[stockName], quantity: tempQuantity + 1, removeCircleClassName: classes.portfolioCartRowDeleteButton}});
+        }
+        else {
+            let maxStockToastDiv = document.getElementById(maxStockToastClasses.maxStockToast);
+            maxStockToastDiv.className = maxStockToastClasses.show;
+            setTimeout(() => { 
+                maxStockToastDiv.className = maxStockToastDiv.className.replace(maxStockToastClasses.show, "");
+            }, 3000);
         }
     }
    quantityOnChangeHandler(event, stockName) {
@@ -57,6 +66,7 @@ class portfolioCart extends Component {
                    <span>WEIGHT</span>
                </div>
                {temp}
+               <MaxStockToast />
            </div>
        );
    }
