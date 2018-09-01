@@ -21,12 +21,11 @@ class portfolioGraph extends Component {
                 borderWidth: 1,
                 pointBorderColor: 'rgba(130, 176, 228, 1)',
                 pointBackgroundColor: 'rgba(130, 176, 228, 1)',
-                pointBorderWidth: 1,
                 pointHoverRadius: 2,
                 pointHoverBackgroundColor: '#1D70CA',
                 pointHoverBorderColor: '#1D70CA',
                 pointHoverBorderWidth: 2,
-                pointRadius: 1,
+                pointRadius: 0,
                 pointHitRadius: 10,
                 data: []
               }
@@ -52,7 +51,7 @@ class portfolioGraph extends Component {
             netWorthArray = netWorthArray.map((value, index) => {
                 let dayNetWorth = 0;
                 for(let stock in portfolioCartStateData) {
-                    dayNetWorth += (data.historical[stock].point[index].price * portfolioCartStateData[stock].quantity);
+                    dayNetWorth += Math.round(data.historical[stock].point[index].price * portfolioCartStateData[stock].quantity);
                 }
                 return dayNetWorth;
             });
