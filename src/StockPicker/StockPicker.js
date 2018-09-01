@@ -20,17 +20,6 @@ class stockPicker extends Component {
             nextButtonCLassNames: ""
         };
     }
-    stockWidgetMouseOverHandler = (index) => {
-            let newStockPrice = this.state.stockPrices.slice();
-            this.tempStockPrice[index] = newStockPrice[index];
-            newStockPrice[index] = "IMG"
-            this.setState({stockPrices: newStockPrice});
-    };
-    stockWidgetMouseOutHandler = (index) => {
-            let newStockPrice = this.state.stockPrices.slice();
-            newStockPrice[index] = this.tempStockPrice[index];
-            this.setState({stockPrices: newStockPrice});
-    };
     nextClickHandler = () => {
         let tempNextButtonCLassNames;
         let tempPrevButtonClassNames;
@@ -75,12 +64,10 @@ class stockPicker extends Component {
         for(let i = 0; i<4; i++) {
             if(this.state.stockNames[i]) {
                 stockWidgetsRow1.push(<StockWidget stockName={this.state.stockNames[i]} stockCategory="Financial Services" stockPrice={this.state.stockPrices[i]} 
-                                mouseOverHandler = {this.stockWidgetMouseOverHandler} mouseOutHandler = {this.stockWidgetMouseOutHandler} 
                                 addStockHandler= {this.props.addStockHandler} index={i} key={i}/> )
             }
             if(this.state.stockNames[i + 4]) {
                 stockWidgetsRow2.push(<StockWidget stockName={this.state.stockNames[i + 4]} stockCategory="Financial Services" stockPrice={this.state.stockPrices[i + 4]} 
-                                mouseOverHandler = {this.stockWidgetMouseOverHandler} mouseOutHandler = {this.stockWidgetMouseOutHandler} 
                                 addStockHandler= {this.props.addStockHandler} index={i + 4} key={i}/> )
             }
         }

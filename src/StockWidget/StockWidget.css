@@ -37,6 +37,7 @@
     top: 0.69rem;
     right: 0.56rem;
     cursor: pointer;
+    visibility: hidden;
 }
   
 .stockWidget span {
