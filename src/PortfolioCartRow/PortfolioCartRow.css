@@ -11,7 +11,7 @@
     position: relative;
 }
 
-.portfolioCartRow:last-child {
+.portfolioCartRow:nth-last-child(2) {
     border-bottom: 0.06rem solid rgba(0,0,0,0.10);
     border-radius: 0.25rem;
 }
