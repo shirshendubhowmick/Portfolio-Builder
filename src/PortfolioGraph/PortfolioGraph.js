@@ -66,7 +66,6 @@ class portfolioGraph extends Component {
         if(this.state.displayGraph) {
             this.chartData.datasets[0].data = this.state.graphData;
             graphDivContent = <div className={classes.chartContainerDiv}><span>VALUE</span><span>TIME</span><Line data={this.chartData} options={this.options}/></div>
-            // console.log(this.chartData.datasets[0].data);
         }
         return (
             <div className={classes.portfolioGraphDiv}>

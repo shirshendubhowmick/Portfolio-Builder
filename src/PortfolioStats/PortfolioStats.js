@@ -9,7 +9,6 @@ class portfolioStats extends Component {
         this.state = {netWorth: "0", noOfStocks: 0, pByERatio: 0};
     }
     updateStats(portfolioCartStateData) {
-        console.log(portfolioCartStateData);
         let netWorth = 0;
         let pByEDeno = 0;
         for(let stock in portfolioCartStateData) {
