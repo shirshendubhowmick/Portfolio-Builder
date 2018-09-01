@@ -33,6 +33,10 @@
     margin-left: 3rem;
 }
 
+.portfolioStatsDiv>div:nth-child(4) div:nth-child(1) {
+    width: 3.38rem;
+}
+
 .portfolioStatsDiv>div:nth-child(4) div:nth-child(2) {
     margin-left: 3.63rem;
 }

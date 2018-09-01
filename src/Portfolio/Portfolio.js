@@ -10,8 +10,8 @@ class portfolio extends Component {
         this.refs.portfolioCartChild.addStockHandler(stockName);
     }
     passPortfolioCartState(stateData) {
-        if(this.refs.portfolioGraphChild)
-            this.refs.portfolioGraphChild.updateGraph(stateData);
+        this.refs.portfolioGraphChild.updateGraph(stateData);
+        this.refs.portfolioStatsChild.updateStats(stateData);
     }
     render() {
         return (
@@ -19,7 +19,7 @@ class portfolio extends Component {
                 <Badge className={classes.badge_portfolio}>MANAGE PORTFOLIO</Badge>
                 <PortfolioCart ref="portfolioCartChild" passPortfolioCartState={this.passPortfolioCartState.bind(this)} />
                 <PortfolioGraph ref="portfolioGraphChild" />
-                <PortfolioStats />
+                <PortfolioStats ref="portfolioStatsChild" />
             </div>
         );
     }
