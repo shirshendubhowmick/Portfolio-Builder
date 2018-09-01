@@ -7,16 +7,19 @@ import classes from './StockPicker.css'
 
 
 class stockPicker extends Component {
-    tempStockPrice = [];
-    state = {
-        totalStocksDataLength: Object.keys(data.price).length,
-        startIndex: 0,
-        endIndex: 8,
-        stockNames: (Object.keys(data.price)).slice(0, 8),
-        stockPrices:(Object.values(data.price)).slice(0, 8),
-        prevButtonClassNames: classes["row_nextPrevDisabled"],
-        nextButtonCLassNames: ""
-    };
+    constructor(props) {
+        super(props)
+        this.tempStockPrice = [];
+        this.state = {
+            totalStocksDataLength: Object.keys(data.price).length,
+            startIndex: 0,
+            endIndex: 8,
+            stockNames: (Object.keys(data.price)).slice(0, 8),
+            stockPrices:(Object.values(data.price)).slice(0, 8),
+            prevButtonClassNames: classes["row_nextPrevDisabled"],
+            nextButtonCLassNames: ""
+        };
+    }
     stockWidgetMouseOverHandler = (index) => {
             let newStockPrice = this.state.stockPrices.slice();
             this.tempStockPrice[index] = newStockPrice[index];
